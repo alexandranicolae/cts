@@ -1,11 +1,25 @@
 package program;
 
+import clase.Giraffe;
+import clase.Zebra;
+import clase.Zoo;
+
 public class Main {
 
-	//shareuire: 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Zoo z=new Zoo();
+		Giraffe g1=new Giraffe("Girafica1");
+		Giraffe g2=new Giraffe("Girafica2");
+		
+		Zebra z1=new Zebra("Zebrica1");
+		Zebra z2=new Zebra("Zebrica2");
 
+		z.addAnimal(g1);
+		z.addAnimal(g2);
+		z.addAnimal(z1);
+		z.addAnimal(z2);
+		
+		z.feedAll();
 	}
 
 }
