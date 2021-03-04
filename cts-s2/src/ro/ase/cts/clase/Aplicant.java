@@ -41,8 +41,6 @@ public abstract class Aplicant{
 	}
 	
 	
-
-	
 	public Aplicant() {
 		super();
 		// TODO Auto-generated constructor stub

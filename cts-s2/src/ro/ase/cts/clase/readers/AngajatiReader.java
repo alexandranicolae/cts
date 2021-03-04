@@ -9,14 +9,15 @@ import java.util.Scanner;
 import ro.ase.cts.clase.Angajat;
 import ro.ase.cts.clase.Aplicant;
 
-public class AngajatiReader {
+public class AngajatiReader extends AplicantiReader {
 	
 //	Am facut aceste clase ca sa respecte Single Responsability
 	
 //	nu folosim ArrayList, folosim List - principiul Dependency Inversion Principle .....
 	
-	public static List<Aplicant> readAngajati(String file) throws FileNotFoundException {
-		Scanner input2 = new Scanner(new File(file));
+	
+	public List<Aplicant> readAplicanti() throws FileNotFoundException {
+		Scanner input2 = new Scanner(new File(super.fileName));
 		input2.useDelimiter(",");
 		List<Aplicant> angajati = new ArrayList<Aplicant>();
 
@@ -37,4 +38,10 @@ public class AngajatiReader {
 		input2.close();
 		return angajati;
 	}
+
+	public AngajatiReader(String fileName) {
+		super(fileName);
+		// TODO Auto-generated constructor stub
+	}
+
 }
