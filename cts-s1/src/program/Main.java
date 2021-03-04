@@ -20,6 +20,7 @@ public class Main {
 		z.addAnimal(z2);
 		
 		z.feedAll();
+		System.out.println(z.getIngrijitor().getName()+" este fericit!");
 	}
 
 }
