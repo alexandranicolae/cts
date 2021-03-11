@@ -9,6 +9,12 @@ public abstract class Aplicant{
 	protected String[] denumireProiect;
 	
 	
+	public String[] getDenumireProiect() {
+		return denumireProiect;
+	}
+	public void setDenumireProiect(String[] denumireProiect) {
+		this.denumireProiect = denumireProiect;
+	}
 	public String getNume() {
 		return nume;
 	}
@@ -54,11 +60,13 @@ public abstract class Aplicant{
 		this.nr_proiecte = nr_proiecte;
 		this.denumireProiect = denumireProiect;
 	}
+	
 	public int getNr_proiecte() {
 		return nr_proiecte;
 	}
-	public void setNr_proiecte(int nr_proiecte) {
+	public void setDenumiriProiecte(int nr_proiecte, String[] denumire_proiecte) {
 		this.nr_proiecte = nr_proiecte;
+		this.denumireProiect=denumire_proiecte;
 	}
 
 }
