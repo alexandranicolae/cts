@@ -23,8 +23,10 @@ public class Program {
 		try {
 			
 			listaAngajati = CitireAplicanti(new AngajatiReader("angajati.txt"));
-			for(Aplicant angajat:listaAngajati)
+			for(Aplicant angajat:listaAngajati) {
 				System.out.println(angajat.toString());
+				System.out.println("Angajatul"+angajat.getNume()+" "+angajat.getPrenume()+" primeste "+angajat.getSumaFinantata()+" Euro/zi in proiect.");
+			}
 		
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

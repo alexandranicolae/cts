@@ -5,6 +5,8 @@ import java.util.Arrays;
 public class Student extends Aplicant {
 	protected String facultate;
 	protected int an_studii;
+	//toti studentii vor avea aceeasi suma finantata
+	private static int sumaFinantata=20;
 	
 	
 	public String getFacultate() {
@@ -36,11 +38,12 @@ public class Student extends Aplicant {
 		return "Student: Nume=" + nume + ", Prenume=" + prenume + ", Varsta=" + varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte +  ", DenumireProiect=" + Arrays.toString(denumireProiect) + "Facultate=" + facultate + ", An_studii=" + an_studii ;
 	}
 	
-	
-	public int finantare() {
-		int s=20;
-		System.out.println("Studentul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
-		return s;
+	@Override
+	public int getSumaFinantata() {
+		//int s=20;
+		//face prea multe lucruri deodata (si afisare si returnare)
+		//System.out.println("Studentul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
+		return sumaFinantata;
 	}
 	
 }
