@@ -1,7 +1,5 @@
 package ro.ase.cts.clase;
 
-import java.util.Arrays;
-
 public class Angajat extends Aplicant{
 	private String ocupatie;
 	private int salariu;
@@ -29,16 +27,27 @@ public class Angajat extends Aplicant{
 		
 	}
 	
-	
 	@Override
 	public String toString() {
-		return "Angajat: Nume=" + nume + ", Prenume=" + prenume
-				+ ", Varsta=" + varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte + ", DenumireProiect="
-				+ Arrays.toString(denumireProiect) + "Ocupatie=" + ocupatie + ", salariu=" + salariu;
+		StringBuilder builder = new StringBuilder();
+		builder.append("Angajat: ");
+		builder.append(super.toString());
+		builder.append(" ,ocupatie=");
+		builder.append(ocupatie);
+		builder.append(" ,salariu=");
+		builder.append(salariu);
+		return builder.toString();
 	}
 	
+	
+	public static int getSumaFinantata() {
+		return sumaFinantata;
+	}
+	public static void setSumaFinantata(int sumaFinantata) {
+		Angajat.sumaFinantata = sumaFinantata;
+	}
 	@Override
-	public int getSumaFinantata() {
+	public int getFinantare() {
 		//int s=10;
 		//System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
 		return sumaFinantata;

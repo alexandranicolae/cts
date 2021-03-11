@@ -23,15 +23,15 @@ public abstract class AplicantiReader {
 		int varsta = scanner.nextInt();
 		int punctaj = scanner.nextInt();
 		int nr_proiecte = scanner.nextInt();
-		String[] denumireProiect = new String[5];
+		String[] denumiriProiecte = new String[nr_proiecte];
 		for (int i = 0; i < nr_proiecte; i++)
-			denumireProiect[i] = scanner.next();
+			denumiriProiecte[i] = scanner.next();
 		
 		aplicant.setNume(nume);
 		aplicant.setPrenume(prenume);
 		aplicant.setVarsta(varsta);
 		aplicant.setPunctaj(punctaj);
-		aplicant.setDenumiriProiecte(nr_proiecte, denumireProiect);
+		aplicant.setDenumiriProiecte(nr_proiecte, denumiriProiecte);
 		
 	}
 }

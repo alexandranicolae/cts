@@ -1,7 +1,5 @@
 package ro.ase.cts.clase;
 
-import java.util.Arrays;
-
 public class Elev extends Aplicant{
 	private int clasa;
 	private String tutore;
@@ -23,10 +21,14 @@ public class Elev extends Aplicant{
 	
 	@Override
 	public String toString() {
-		return "Elev: Nume=" + nume + ", Prenume=" + prenume + ", Varsta="
-				+ varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte  + ", DenumireProiect="
-				+ Arrays.toString(denumireProiect) + "Clasa=" + clasa + ", Tutore=" + tutore;
-	}
+		StringBuilder builder = new StringBuilder();
+		builder.append("Elev: ");
+		builder.append(super.toString());
+		builder.append(" ,clasa=");
+		builder.append(clasa);
+		builder.append(" ,tutore=");
+		builder.append(tutore);
+		return builder.toString();}
 	
 	public Elev() {
 		super();
@@ -39,8 +41,16 @@ public class Elev extends Aplicant{
 		this.tutore = tutore;
 	}
 	
+	public static void setSumaFinantata(int sumaFinantata) {
+		Elev.sumaFinantata = sumaFinantata;
+	}
+	
+	public static int getSumaFinantata() {
+		return sumaFinantata;
+	}
+	
 	@Override
-	public int getSumaFinantata() {
+	public int getFinantare() {
 		//int s=30;
 		//System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
 		return sumaFinantata;

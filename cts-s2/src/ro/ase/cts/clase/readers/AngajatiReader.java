@@ -17,22 +17,22 @@ public class AngajatiReader extends AplicantiReader {
 	
 	
 	public List<Aplicant> readAplicanti() throws FileNotFoundException {
-		Scanner input2 = new Scanner(new File(super.fileName));
-		input2.useDelimiter(",");
+		Scanner scanner = new Scanner(new File(super.fileName));
+		scanner.useDelimiter(",");
 		List<Aplicant> angajati = new ArrayList<Aplicant>();
 
-		while (input2.hasNext()) {
+		while (scanner.hasNext()) {
 			Angajat angajat=new Angajat();
-			super.readAplicant(input2, angajat);
+			super.readAplicant(scanner, angajat);
 			
-			int salariu = input2.nextInt();
-			String ocupatie = input2.next();
+			int salariu = scanner.nextInt();
+			String ocupatie = scanner.next();
 			angajat.setSalariu(salariu); 
 			angajat.setOcupatie(ocupatie);
 			
 			angajati.add(angajat);
 		}
-		input2.close();
+		scanner.close();
 		return angajati;
 	}
 
